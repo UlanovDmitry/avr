@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.42  G:\ProgMCU\testAVR\testAVR.asm Mon Nov 19 09:26:42 2018
+AVRASM ver. 2.1.42  D:\ProgAVR\testAVR\testAVR.asm Wed Aug 01 21:40:49 2018
 
 
 EQU  SIGNATURE_000 0000001e
@@ -693,3 +693,5 @@ EQU  ACIaddr      0000002e
 EQU  TWIaddr      00000030
 EQU  SPMRaddr     00000032
 EQU  INT_VECTORS_SIZE 00000034
+CSEG start        00000003
+CSEG off          00000007

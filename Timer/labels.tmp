@@ -1,0 +1,27 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega328P</DEVICE>
+ <WORKING_DIR>C:\ProgAVR\Timer</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\ProgAVR\Timer\Timer.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m328Pdef.inc</FILE>
+  <FILE>C:\ProgAVR\Timer\macro.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\ProgAVR\Timer\Timer.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\ProgAVR\Timer\Timer.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\ProgAVR\Timer\Timer.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <Reset><FILE>C:\ProgAVR\Timer\Timer.asm</FILE><LINE>72</LINE></Reset>
+  <Timer0OV><FILE>C:\ProgAVR\Timer\Timer.asm</FILE><LINE>60</LINE></Timer0OV>
+  <Main><FILE>C:\ProgAVR\Timer\Timer.asm</FILE><LINE>87</LINE></Main>
+ </LABELS>
+</ASSEMBLER_INFO>
