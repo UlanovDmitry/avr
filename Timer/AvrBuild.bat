@@ -1,2 +1,2 @@
 @ECHO OFF
-"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\ProgAVR\Timer\labels.tmp" -fI -W+ie -C V2E -o "C:\ProgAVR\Timer\Timer.hex" -d "C:\ProgAVR\Timer\Timer.obj" -e "C:\ProgAVR\Timer\Timer.eep" -m "C:\ProgAVR\Timer\Timer.map" "C:\ProgAVR\Timer\Timer.asm"
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "G:\ProgAVR\Timer\labels.tmp" -fI -W+ie -C V2E -o "G:\ProgAVR\Timer\Timer.hex" -d "G:\ProgAVR\Timer\Timer.obj" -e "G:\ProgAVR\Timer\Timer.eep" -m "G:\ProgAVR\Timer\Timer.map" "G:\ProgAVR\Timer\Timer.asm"

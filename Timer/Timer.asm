@@ -29,7 +29,7 @@
 		.org $014 ;TIMER1_CAPT Timer/Counter1 Capture Event
 		reti
 		.org $016 ;TIMER1_COMPA Timer/Counter1 Compare Match A
-		reti
+		rjmp Timer1CA
 		.org $018 ;TIMER1_COMPB Timer/Coutner1 Compare Match B
 		reti
 		.org $01A ;TIMER1_OVF Timer/Counter1 Overflow
@@ -39,7 +39,7 @@
 		.org $01E ;TIMER0_COMPB Timer/Coutner0 Compare Match B
 		reti
 		.org $020 ;TIMER0_OVF Timer/Counter0 Overflow
-		rjmp Timer0OV
+		reti
 		.org $022 ;SPI STC SPI Serial Transfer Complete
 		reti
 		.org $024 ;USART_RX USART Rx Complete
@@ -57,40 +57,70 @@
 		.org INT_VECTORS_SIZE      	;Конец таблицы прерываний
 
 ;Обработчики прерываний 
-Timer0OV:	pushf
-			push    r17
-			push    r18
-			push    r19			
-
-			pop     r19
-			pop     r18
-			pop     r17
-			popf
+Timer1CA:   
+            set	
 			reti	
 
 ;Точка входа 
-Reset:   	ldi 	R16,Low(RAMEND)	;Инициализация стека
+Reset:   	
+            ldi 	R16,Low(RAMEND)	;Инициализация стека
 		    out 	SPL,R16			
 		 	ldi 	R16,High(RAMEND)
 		 	out 	SPH,R16
 ;.include "coreinit.inc"	        ;Очистка памяти
-                                    ;Конфигурация оборудования
-			lds		r16,timsk0		;включаем прерывание по переполнению T0
-			ori		r16,1<<toie0
+            ;Конфигурация оборудования
+			lds		r16,timsk0		;включаем прерывание по совпадению в канале A
+			ori		r16,1<<ocie0a
 			sts		timsk0,r16		
-			in		r16,tccr0b		;устанавливаем предделитель 1 (001)
-			ori		r16,(1<<cs00)
+			in		r16,tccr0b		;устанавливаем предделитель 1024 (101)
+			ori		r16,(1<<cs02)|(1<<cs00)
 			out		tccr0b,r16	
+            ;Программные настройки
+            clr     r18             ;готовим счетчик и флаг
+            clt
 			sei						;разрешаем прерывания глобально
 
 ;Цикл выполнения
 Main:
-			nop
-			nop ax, i
-			nop
+            brtc    Main            ;проверяем флаг на смену цифры
+            clt                     ;cбрасываем флаг
+			inc		r18			    ;увеличиваем счетчик
+			cpi		r18,10		    ;очищаем, если переполнение
+			brlo	pc+2
+			clr		r18				
+			mov		r16,r18
+            call    WriteDigit      ;запускаем процедуру вывода цифры
 			jmp	Main
 
 ;Процедуры
+WriteDigit:  ;записать шаблон цифры в порты
+			ldi		zl,low(digits*2)	; загружаем адрес таблицы
+			ldi		zh,high(digits*2)
+			cpi		r16,0				; проверяем выход за границы
+			brlo	outbnds
+			cpi		r16,10
+			brsh	outbnds			
+			lsl		r16					; вычисляем смещение
+			rjmp	addshift				
+outbnds:	ldi		r16,10*2
+addshift:	clr		r17					; прибавляем смещение
+			add		zl,r16
+			adc		zh,r17
+			lpm		r17,z+				; загружаем шаблон из таблицы
+			lpm		r16,z
+			in		r20,pinb			; читаем данные из портов
+			in		r21,pind
+			andi	r20,0xfc			; накладываем маску
+			andi	r21,0x03
+			add		r20,r16				; прибавляем шаблон
+			add		r21,r17
+			out		portb,r20			; пишем данные обратно в порт
+			out		portd,r21
+            ret
+
+;Данные в памяти программ
+digits:		.dw		0x00fc,0x0018,0x016c,0x013c,0x0198
+			.dw		0x01b4,0x01f4,0x001c,0x01fc,0x01bc,0x0000  
 
 ;EEPROM
 	    .ESEG
