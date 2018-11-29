@@ -1,31 +1,31 @@
 <ASSEMBLER_INFO>
  <VERSION>2.1.42</VERSION>
  <DEVICE>ATmega328P</DEVICE>
- <WORKING_DIR>G:\ProgAVR\Timer</WORKING_DIR>
+ <WORKING_DIR>C:\ProgAVR\Timer</WORKING_DIR>
  <INCLUDE_PATH>
   <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
  </INCLUDE_PATH>
- <SOURCE_FILE>G:\ProgAVR\Timer\Timer.asm</SOURCE_FILE>
+ <SOURCE_FILE>C:\ProgAVR\Timer\Timer.asm</SOURCE_FILE>
  <INCLUDED_FILES>
   <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m328Pdef.inc</FILE>
-  <FILE>G:\ProgAVR\Timer\macro.inc</FILE>
+  <FILE>C:\ProgAVR\Timer\macro.inc</FILE>
  </INCLUDED_FILES>
  <OBJECT_FILES>
-  <FILE>G:\ProgAVR\Timer\Timer.obj</FILE>
+  <FILE>C:\ProgAVR\Timer\Timer.obj</FILE>
  </OBJECT_FILES>
  <HEX_FILES>
-  <FILE>G:\ProgAVR\Timer\Timer.hex</FILE>
+  <FILE>C:\ProgAVR\Timer\Timer.hex</FILE>
  </HEX_FILES>
  <OUTPUT_FILES>
-  <FILE>G:\ProgAVR\Timer\Timer.map</FILE>
+  <FILE>C:\ProgAVR\Timer\Timer.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <Reset><FILE>G:\ProgAVR\Timer\Timer.asm</FILE><LINE>65</LINE></Reset>
-  <Timer1CA><FILE>G:\ProgAVR\Timer\Timer.asm</FILE><LINE>60</LINE></Timer1CA>
-  <Main><FILE>G:\ProgAVR\Timer\Timer.asm</FILE><LINE>88</LINE></Main>
-  <WriteDigit><FILE>G:\ProgAVR\Timer\Timer.asm</FILE><LINE>100</LINE></WriteDigit>
-  <digits><FILE>G:\ProgAVR\Timer\Timer.asm</FILE><LINE>126</LINE></digits>
-  <outbnds><FILE>G:\ProgAVR\Timer\Timer.asm</FILE><LINE>109</LINE></outbnds>
-  <addshift><FILE>G:\ProgAVR\Timer\Timer.asm</FILE><LINE>110</LINE></addshift>
+  <Reset><FILE>C:\ProgAVR\Timer\Timer.asm</FILE><LINE>65</LINE></Reset>
+  <Timer1CA><FILE>C:\ProgAVR\Timer\Timer.asm</FILE><LINE>60</LINE></Timer1CA>
+  <Main><FILE>C:\ProgAVR\Timer\Timer.asm</FILE><LINE>88</LINE></Main>
+  <WriteDigit><FILE>C:\ProgAVR\Timer\Timer.asm</FILE><LINE>100</LINE></WriteDigit>
+  <digits><FILE>C:\ProgAVR\Timer\Timer.asm</FILE><LINE>126</LINE></digits>
+  <outbnds><FILE>C:\ProgAVR\Timer\Timer.asm</FILE><LINE>109</LINE></outbnds>
+  <addshift><FILE>C:\ProgAVR\Timer\Timer.asm</FILE><LINE>110</LINE></addshift>
  </LABELS>
 </ASSEMBLER_INFO>
