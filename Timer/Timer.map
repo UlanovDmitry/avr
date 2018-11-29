@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.42  G:\ProgAVR\Timer\Timer.asm Mon Nov 26 13:05:02 2018
+AVRASM ver. 2.1.42  G:\ProgAVR\Timer\Timer.asm Thu Nov 29 13:38:24 2018
 
 
 EQU  SIGNATURE_000 0000001e
@@ -694,9 +694,9 @@ EQU  TWIaddr      00000030
 EQU  SPMRaddr     00000032
 EQU  INT_VECTORS_SIZE 00000034
 CSEG Reset        00000036
-CSEG Timer0OV     00000034
-CSEG Main         00000045
-CSEG WriteDigit   00000050
-CSEG digits       00000067
-CSEG outbnds      00000058
-CSEG addshift     00000059
+CSEG Timer1CA     00000034
+CSEG Main         0000004d
+CSEG WriteDigit   00000058
+CSEG digits       0000006f
+CSEG outbnds      00000060
+CSEG addshift     00000061
