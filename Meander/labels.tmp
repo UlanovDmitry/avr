@@ -1,0 +1,26 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega328P</DEVICE>
+ <WORKING_DIR>C:\ProgAVR\Meander</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\ProgAVR\Meander\Meander.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\ProgAVR\Meander\Meander.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\ProgAVR\Meander\Meander.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\ProgAVR\Meander\Meander.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <Reset><FILE>C:\ProgAVR\Meander\Meander.asm</FILE><LINE>68</LINE></Reset>
+  <Timer1CA><FILE>C:\ProgAVR\Meander\Meander.asm</FILE><LINE>60</LINE></Timer1CA>
+  <Main><FILE>C:\ProgAVR\Meander\Meander.asm</FILE><LINE>91</LINE></Main>
+ </LABELS>
+</ASSEMBLER_INFO>
