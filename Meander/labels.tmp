@@ -19,8 +19,8 @@
   <FILE>C:\ProgAVR\Meander\Meander.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <Reset><FILE>C:\ProgAVR\Meander\Meander.asm</FILE><LINE>68</LINE></Reset>
+  <Reset><FILE>C:\ProgAVR\Meander\Meander.asm</FILE><LINE>69</LINE></Reset>
   <Timer1CA><FILE>C:\ProgAVR\Meander\Meander.asm</FILE><LINE>60</LINE></Timer1CA>
-  <Main><FILE>C:\ProgAVR\Meander\Meander.asm</FILE><LINE>91</LINE></Main>
+  <Main><FILE>C:\ProgAVR\Meander\Meander.asm</FILE><LINE>93</LINE></Main>
  </LABELS>
 </ASSEMBLER_INFO>
