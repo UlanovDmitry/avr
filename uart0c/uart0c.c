@@ -8,7 +8,8 @@ void USART_Transmit( unsigned char data );
 int main( void ) //Главная функция
 {// 51
 	USART_Init(103); //Скорость соединения 9600 бит/с для микроконтроллера ATMega328P
-	for (unsigned char i=0x32;i<0x49;i++) //Вечный цикл
+	//for (unsigned char i=0x32;i<0x49;i++) //Вечный цикл
+	for(;;)
 	{
 		USART_Transmit(USART_Receive()); //Отправка принятого символа назад
 		//USART_Transmit(i);//0x36);
