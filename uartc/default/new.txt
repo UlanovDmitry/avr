@@ -1,0 +1,30 @@
+000000ac <writeSerial>:
+  ac:	cf 93       	push	r28
+  ae:	df 93       	push	r29
+  b0:	ec 01       	movw	r28, r24
+  b2:	60 e0       	ldi	r22, 0x00	; 0
+  b4:	88 81       	ld	r24, Y
+  b6:	88 23       	and	r24, r24
+  b8:	89 f0       	breq	.+34     	; 0xdc <writeSerial+0x30>
+  ba:	a0 ec       	ldi	r26, 0xC0	; 192
+  bc:	b0 e0       	ldi	r27, 0x00	; 0
+  be:	26 ec       	ldi	r18, 0xC6	; 198
+  c0:	30 e0       	ldi	r19, 0x00	; 0
+  c2:	8c 91       	ld	r24, X
+  c4:	85 ff       	sbrs	r24, 5
+  c6:	fd cf       	rjmp	.-6      	; 0xc2 <writeSerial+0x16>
+  c8:	fe 01       	movw	r30, r28
+  ca:	e6 0f       	add	r30, r22
+  cc:	f1 1d       	adc	r31, r1
+  ce:	80 81       	ld	r24, Z
+  d0:	f9 01       	movw	r30, r18
+  d2:	80 83       	st	Z, r24
+  d4:	6f 5f       	subi	r22, 0xFF	; 255
+  d6:	88 81       	ld	r24, Y
+  d8:	88 23       	and	r24, r24
+  da:	99 f7       	brne	.-26     	; 0xc2 <writeSerial+0x16>
+  dc:	80 e0       	ldi	r24, 0x00	; 0
+  de:	90 e0       	ldi	r25, 0x00	; 0
+  e0:	df 91       	pop	r29
+  e2:	cf 91       	pop	r28
+  e4:	08 95       	ret

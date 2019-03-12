@@ -1,3 +1,6 @@
+#define F_CPU 16000000UL
+#define BAUD 9600
+#define UBRRN F_CPU/16/BAUD-1
 #include <avr/io.h>
 
 //Перечисляем прототипы функций
@@ -6,10 +9,10 @@ unsigned char USART_Receive( void );
 void USART_Transmit( unsigned char data ); 
 
 int main( void ) //Главная функция
-{// 51
-	USART_Init(103); //Скорость соединения 9600 бит/с для микроконтроллера ATMega328P
-	//for (unsigned char i=0x32;i<0x49;i++) //Вечный цикл
-	for(;;)
+{// 51  103
+	USART_Init(UBRRN); //Скорость соединения 9600 бит/с для микроконтроллера ATMega328P
+	for (unsigned char i=0x32;i<0x49;i++) //Вечный цикл
+	//for(;;)
 	{
 		USART_Transmit(USART_Receive()); //Отправка принятого символа назад
 		//USART_Transmit(i);//0x36);
