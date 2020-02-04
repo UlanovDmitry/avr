@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "delay.h": "c",
+        "io.h": "c",
+        "sfr_defs.h": "c",
+        "inttypes.h": "c",
+        "iom328p.h": "c",
+        "version.h": "c",
+        "common.h": "c",
+        "portpins.h": "c"
+    }
+}

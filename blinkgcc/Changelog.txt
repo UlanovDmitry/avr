@@ -1,1 +1,5 @@
 Blink avr на gcc
+
+
+0.1
+Перенёс на avr-gcc программу testAVR
