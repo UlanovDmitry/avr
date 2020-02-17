@@ -1,7 +1,7 @@
 PHONY: all asm list clean 
 
 all:
-	avr-gcc -mmcu=attiny45 -Wall -Os -o build/blink.elf blink.c
+	avr-gcc -mmcu=atmega328p -Wall -Os -o build/blink.elf blink.c
 	avr-objcopy -O ihex build/blink.elf build/blink.hex
 
 asm:
