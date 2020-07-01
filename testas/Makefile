@@ -14,6 +14,10 @@ list: build
 	avr-objdump -S main.o
 	avr-objdump -m avr -D main.hex
 
+debug: build
+	/opt/simulavr/src/simulavr -g -d atmega328 -F 8000000 &
+	avr-gdb main.o
+
 clean:
 	# rm *.hex
 	# rm *.elf
