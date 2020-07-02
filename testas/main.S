@@ -51,11 +51,11 @@ init:
         ldi r16, 2
         ret
 
-// load digit address
+// load digit 
 load_digit:
         andi r16, 0x0f  // put mask
         andi r17, 0x00
-        lsl r16         // mult digit on 2
+        lsl r16         // mult number on 2
         rol r17
         mov r18, r16
         mov r19, r17
