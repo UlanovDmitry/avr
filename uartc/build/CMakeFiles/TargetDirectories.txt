@@ -1,3 +1,0 @@
-/opt/avr/uartc/build/CMakeFiles/rebuild_cache.dir
-/opt/avr/uartc/build/CMakeFiles/edit_cache.dir
-/opt/avr/uartc/build/CMakeFiles/uartc.dir
