@@ -8,29 +8,14 @@ add_definitions(
     -DF_CPU=${F_CPU}
     -DBAUD=${BAUD}
 )
-# mmcu MUST be passed to bot the compiler and linker, this handle the linker
+# mmcu MUST be passed to both the compiler and linker, this handle the linker
 set(CMAKE_EXE_LINKER_FLAGS -mmcu=${MCU})
 
 add_compile_options(
-    -mmcu=${MCU} # MCU
-    -std=gnu99 # C99 standard
-    -Os # optimize
-    -Wall # enable warnings
-    -Wno-main
-    -Wundef
-    -pedantic
-    -Wstrict-prototypes
-    -Werror
-    -Wfatal-errors
-    -Wl,--relax,--gc-sections
-    -g
-    -gdwarf-2
-    -funsigned-char # a few optimizations
-    -funsigned-bitfields
-    -fpack-struct
-    -fshort-enums
-    -ffunction-sections
-    -fdata-sections
-    -fno-split-wide-types
-    -fno-tree-scev-cprop
+    -mmcu=${MCU}
+    -std=c99
+    -Os
+    -Wall
+    -ggdb
+    -I "/usr/lib/avr/include"
 )

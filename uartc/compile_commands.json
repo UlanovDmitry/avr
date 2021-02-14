@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/opt/avr/uartc/cmake-build-Release",
+  "command": "avr-gcc -DBAUD=9600 -DF_CPU=16000000UL  -O3 -DNDEBUG   -mmcu=atmega328p -std=c99 -Os -Wall -ggdb -Irelative -I /usr/lib/avr/include -o CMakeFiles/uartc.dir/src/main.c.obj   -c /opt/avr/uartc/src/main.c",
+  "file": "/opt/avr/uartc/src/main.c"
+}
+]

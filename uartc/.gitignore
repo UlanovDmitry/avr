@@ -1,6 +1,8 @@
 .vscode
 cmake-build-Release
 build
+.clangd
+.cache
 *.hex
 *.elf
 *.o
